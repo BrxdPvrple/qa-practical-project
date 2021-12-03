@@ -1,15 +1,18 @@
 - hosts: managers
   become: true
   roles: 
-  - docker
-  - swarm-manager
+  - install-docker
+  - install-docker-compose
+  - swarm-init
+
 - hosts: workers
   become: true
   roles:
-  - docker
-  - swarm-worker1
-  - swarm-worker2
+  - install-docker
+  - install-docker-compose
+  - add-worker
+
 - hosts: load-balancer
   become: true
   roles:
-  - nginx-lb
+  - install-nginx
