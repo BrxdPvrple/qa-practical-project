@@ -7,7 +7,6 @@ all:
     hosts:
       workers:
         swarm-worker1:
-        swarm-worker2:
 
     hosts:
       load-balancer:

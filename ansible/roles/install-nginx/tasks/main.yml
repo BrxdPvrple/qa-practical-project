@@ -1,2 +1,22 @@
 ---
 # tasks file for install-nginx
+- name: Install NGINX
+  apt: 
+    name: nginx
+    state: latest
+    update_cache: true
+
+- name: Start NGINX
+  service:
+    name: nginx
+    state: started
+
+- name: Copy nginx.conf
+  copy:
+    src: nginx.conf
+    dest: /home/clril/qa-practical-project/ansible/roles/install-nginx/tasks/nginx.conf
+
+- name: Restart NGINX
+  service:
+    name: nginx
+    state: restarted
