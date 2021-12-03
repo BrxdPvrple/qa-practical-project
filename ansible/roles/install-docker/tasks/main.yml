@@ -35,4 +35,11 @@
   get_url: 
     url : "https://github.com/docker/compose/releases/download/v2.1.1/docker-compose-Linux-x86_64"
     dest: /usr/local/bin/docker-compose
-    mode: 'u+x,g+x'
+    mode: 'a+x'
+    force: yes
+
+- name: Install Git
+  apt:
+    name: git
+    state: present
+    update_cache: true
