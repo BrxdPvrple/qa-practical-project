@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  frontend:
+    container_name: frontend
+    image: brxdpvrple/frontend:v0.1
+    build: ./service1
+    ports:
+    - published: 5000
+      target: 5000
+  genres:
+    container_name: genre_generator
+    image: brxdpvrple/genres:v0.1
+    build: ./service2
+    ports:
+    - published: 5001
+      target: 5000
+  instruments:
+    container_name: instrument_generator
+    image: brxdpvrple/instruments:v0.1
+    build: ./service3
+    ports:
+    - published: 5002
+      target: 5000
+  backend:
+    container_name: backend
+    image: brxdpvrple/backend:v0.1
+    build: ./service4
+    ports:
+    - published: 5003
+      target: 5000
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
