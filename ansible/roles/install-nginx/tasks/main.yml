@@ -14,7 +14,7 @@
 - name: Copy nginx.conf
   copy:
     src: nginx.conf
-    dest: /home/clril/qa-practical-project/ansible/roles/install-nginx/tasks/nginx.conf
+    dest: /etc/nginx/nginx.conf
 
 - name: Restart NGINX
   service:

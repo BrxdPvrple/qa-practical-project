@@ -1,5 +1,10 @@
 ---
 # tasks file for add-worker
+- name: Install Dependencies
+  pip: 
+    name: docker-py
+
+
 - name: Add Worker
   docker_swarm:
     state: join

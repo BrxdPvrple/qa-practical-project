@@ -4,7 +4,6 @@ all:
       hosts:
         swarm-manager:
 
-
     workers:
       hosts:
         swarm-worker1:

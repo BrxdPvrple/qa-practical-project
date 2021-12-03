@@ -10,4 +10,4 @@
 
 - name: Swarm Info
   docker_swarm_info:
-  register: swarm_info
+  register: info
