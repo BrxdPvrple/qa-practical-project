@@ -18,6 +18,12 @@
   become: yes
 
 
+- name: Change User Permissions
+  shell: 
+    cmd: chmod 666 /var/run/docker.sock | sudo bash
+  become: yes 
+
+
 - name: Add User
   user:
     name: clril

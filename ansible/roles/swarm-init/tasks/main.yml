@@ -1,9 +1,13 @@
 ---
 # tasks file for swarm-init
+- name: Install Dependencies
+  pip: 
+    name: docker-py
+
 - name: Initialise Swarm
   docker_swarm:
     state: present
 
-- name: "Swarm Info"
+- name: Swarm Info
   docker_swarm_info:
   register: swarm_info

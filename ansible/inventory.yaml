@@ -1,15 +1,16 @@
 all:
   children:
-    hosts:
-      managers:
+    managers:
+      hosts:
         swarm-manager:
 
-    hosts:
-      workers:
+
+    workers:
+      hosts:
         swarm-worker1:
 
-    hosts:
-      load-balancer:
+    load-balancer:
+      hosts:
         nginx-lb:
 
   vars:
