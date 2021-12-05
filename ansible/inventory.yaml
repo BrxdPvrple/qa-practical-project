@@ -6,7 +6,7 @@ all:
 
     workers:
       hosts:
-        swarm-worker1:
+        swarm-worker:
 
     load-balancer:
       hosts:
