@@ -1,5 +1,5 @@
 #!/bin/bash
 
 docker-compose build --parallel
-docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+docker login -u ${DOCKER_UNAME} -p ${DOCKER_PWORD}
 docker-compose push
