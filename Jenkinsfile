@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Run Unit Tests') {
             steps{
-                sh "bash unittests.sh"
+                sh "bash scripts/tests.sh"
             }
         } 
         stage ('Build & Push Images') {
