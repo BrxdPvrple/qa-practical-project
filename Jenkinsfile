@@ -18,7 +18,7 @@ pipeline {
         stage ("Run Ansible") {
             steps{
                 sh "scp -i ~/.ssh/id_rsa docker-compose.yaml docker-swarm:/home/jenkins/docker-compose.yaml"
-                sh "ansible-playbook -v -i Ansible/inventory.yaml Ansible/playbook.yaml"
+                sh "ansible-playbook -v -i ansible/inventory.yaml ansible/playbook.yaml"
             }
         }
     }
