@@ -26,7 +26,7 @@
 
 - name: Add User
   user:
-    name: clril
+    name: jenkins
     groups: docker
     append: yes
 
