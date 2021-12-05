@@ -1,4 +1,0 @@
-flask
-flask-testing
-pytest
-pytest-cov
