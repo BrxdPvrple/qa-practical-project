@@ -10,7 +10,7 @@
   pip install -r test_requirements.txt
 
 
-for service in service1 service2 service3 service4
+for service in service1 service2 service3
 do
     python3 -m pytest --pyargs $service --cov-report term-missing --cov=app
     
