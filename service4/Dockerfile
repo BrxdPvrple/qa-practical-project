@@ -3,4 +3,4 @@ WORKDIR /service4
 COPY . .
 RUN pip3 install -r requirements.txt
 EXPOSE 5003
-ENTRYPOINT ["python3", "app.py"]
+ENTRYPOINT ["python3", "video.py"]
