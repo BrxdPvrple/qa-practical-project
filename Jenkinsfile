@@ -17,7 +17,7 @@ pipeline {
         }
         stage ("Run Ansible") {
             steps{
-                sh "scp -i ~/.ssh/ansible_id_rsa docker-compose.yaml swarm-manager:/home/jenkins/docker-compose.yaml"
+                sh "scp -o StrictHostKeyChecking=no -i ~/.ssh/ansible_id_rsa docker-compose.yaml swarm-manager:/home/jenkins/docker-compose.yaml"
                 sh "ansible-playbook -v -i ansible/inventory.yaml ansible/playbook.yaml"
             }
         }
