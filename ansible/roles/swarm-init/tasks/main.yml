@@ -11,3 +11,10 @@
 - name: Swarm Info
   docker_swarm_info:
   register: info
+
+- name: Deploy Stack
+  docker_stack:
+    state: present
+    name: song-gen
+    compose:
+      - /home/jenkins/docker-compose.yaml
