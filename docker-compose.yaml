@@ -7,8 +7,8 @@ services:
     ports:
     - published: 5000
       target: 5000
-    # deploy:
-    #   replicas: 3
+    deploy:
+      replicas: 2
 
   genres:
     container_name: genre_generator
@@ -17,8 +17,8 @@ services:
     ports:
     - published: 5001
       target: 5000
-    # deploy:
-    #   replicas: 3
+    deploy:
+      replicas: 2
 
   instruments:
     container_name: instrument_generator
@@ -27,8 +27,8 @@ services:
     ports:
     - published: 5002
       target: 5000
-    # deploy:
-    #   replicas: 3
+    deploy:
+      replicas: 2
 
   backend:
     container_name: backend
@@ -37,8 +37,8 @@ services:
     ports:
     - published: 5003
       target: 5000
-    # deploy:
-    #   replicas: 3
+    deploy:
+      replicas: 2
 
   nginx:
     container_name: nginx
