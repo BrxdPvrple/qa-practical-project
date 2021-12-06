@@ -10,7 +10,7 @@
   - install-docker
   - add-worker
 
-- hosts: load-balancer
-  become: true
-  roles:
-  - install-nginx
+# - hosts: load-balancer
+#   become: true
+#   roles:
+#   - install-nginx

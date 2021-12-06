@@ -8,9 +8,9 @@ all:
       hosts:
         swarm-worker:
 
-    load-balancer:
-      hosts:
-        nginx-lb:
+    # load-balancer:
+    #   hosts:
+    #     nginx-lb:
 
   vars:
     ansible_user: jenkins
