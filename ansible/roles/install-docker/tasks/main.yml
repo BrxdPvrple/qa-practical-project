@@ -12,6 +12,14 @@
     - python3-pip
 
 
+- name: Install jsondiff
+  pip:
+    name: jsondiff
+    executable: pip3
+    state: latest
+  become: true
+
+
 - name: Install Docker Script
   shell:
     cmd: curl https://get.docker.com | bash
